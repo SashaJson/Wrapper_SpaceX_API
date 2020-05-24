@@ -1,0 +1,20 @@
+{
+  "name": "wrapper_spacex_api",
+  "version": "1.0.0",
+  "description": "Wrapper SpaceX API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Alexander Shulga (Alex/Sasha JSON)",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SashaJson/Wrapper_SpaceX_API.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SashaJson/Wrapper_SpaceX_API/issues"
+  },
+  "homepage": "https://github.com/SashaJson/Wrapper_SpaceX_API#readme"
+}
