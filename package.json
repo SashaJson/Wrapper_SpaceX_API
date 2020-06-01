@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/SashaJson/Wrapper_SpaceX_API/issues"
   },
-  "homepage": "https://github.com/SashaJson/Wrapper_SpaceX_API#readme"
+  "homepage": "https://github.com/SashaJson/Wrapper_SpaceX_API#readme",
+  "dependencies": {
+    "ajv": "^6.12.2",
+    "node-fetch": "^2.6.0"
+  }
 }
