@@ -4,12 +4,18 @@ const Request = require('../apps/request/requestToEndpoints');
 
 // const infoAPI = new Request();
 // const info = infoAPI.createMethod();
-// info.send().then(res => console.log(res));
+// info.sendDefaultUrl().then(res => console.log(res));
 
 // const infoCompany = new Request();
 // const comInfo = infoCompany.createMethod('CompanyInfo');
-// comInfo.send().then(res => console.log(res));
+// comInfo.sendDefaultUrl().then(res => console.log(res));
 
 // const roadster = new Request();
 // const resRoadster = roadster.createMethod('Roadster');
-// resRoadster.send().then(res => console.log(res));
+// resRoadster.sendDefaultUrl().then(res => console.log(res));
+
+const dragons = new Request();
+const resDragons = dragons.createMethod('Dragons');
+// resDragons.sendDefaultUrl().then(res => console.log(res));
+// resDragons.sendUrlWithQueryId(true).then(res => console.log(res));
+resDragons.sendUrlWithQueryLimit(2).then(res => console.log(res));
