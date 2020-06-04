@@ -15,11 +15,18 @@ class CompanyInfo {
     }
 }
 
+class Roadster {
+    constructor() {
+        this.url = 'https://api.spacexdata.com/v3/roadster'
+    }
+}
+
 class Request {
 
     static list = {
         infoAPI: infoAPI,
-        CompanyInfo: CompanyInfo
+        CompanyInfo: CompanyInfo,
+        Roadster: Roadster
     }
 
     createMethod(name = 'infoAPI') {

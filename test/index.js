@@ -6,6 +6,10 @@ const Request = require('../apps/request/requestToEndpoints');
 // const info = infoAPI.createMethod();
 // info.send().then(res => console.log(res));
 
-const infoCompany = new Request();
-const comInfo = infoCompany.createMethod('CompanyInfo');
-comInfo.send().then(res => console.log(res));
+// const infoCompany = new Request();
+// const comInfo = infoCompany.createMethod('CompanyInfo');
+// comInfo.send().then(res => console.log(res));
+
+// const roadster = new Request();
+// const resRoadster = roadster.createMethod('Roadster');
+// resRoadster.send().then(res => console.log(res));
