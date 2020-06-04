@@ -2,15 +2,10 @@
 
 const Request = require('../apps/request/requestToEndpoints');
 
-const infoAPI = new Request();
+// const infoAPI = new Request();
+// const info = infoAPI.createMethod();
+// info.send().then(res => console.log(res));
 
-const u = infoAPI.createMethod();
-
-const r = async () => {
-
-    const res = await u.send()
-
-    console.log(res)
-}
-
-r()
+const infoCompany = new Request();
+const comInfo = infoCompany.createMethod('CompanyInfo');
+comInfo.send().then(res => console.log(res));
