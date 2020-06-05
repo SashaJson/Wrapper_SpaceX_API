@@ -2,8 +2,8 @@
 
 const Request = require('../apps/request/requestToEndpoints');
 
-// const infoAPI = new Request();
-// const info = infoAPI.createMethod();
+// const InfoAPI = new Request();
+// const info = InfoAPI.createMethod();
 // info.sendDefaultUrl().then(res => console.log(res));
 
 // const infoCompany = new Request();

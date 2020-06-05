@@ -2,7 +2,7 @@
 
 const r = require('./mainRequest');
 
-class infoAPI {
+class InfoAPI {
     constructor() {
         this.url = 'https://api.spacexdata.com/v3'
     }
@@ -30,14 +30,14 @@ class Dragons {
 class Request {
 
     static list = {
-        infoAPI: infoAPI,
+        InfoAPI: InfoAPI,
         CompanyInfo: CompanyInfo,
         Roadster: Roadster,
         Dragons: Dragons
     }
 
-    createMethod(name = 'infoAPI') {
-        const RequestToEndpoint = Request.list[name] || Request.list.infoAPI;
+    createMethod(name = 'InfoAPI') {
+        const RequestToEndpoint = Request.list[name] || Request.list.InfoAPI;
         const request = new RequestToEndpoint();
 
         if (name === 'Dragons') {
