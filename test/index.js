@@ -1,6 +1,6 @@
 'use strict';
 
-const Request = require('../apps/request/requestToEndpoints');
+const Request = require('../src/request/mainClassFactory');
 
 const APISpaceX = new Request();
 
