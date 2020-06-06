@@ -36,6 +36,34 @@ class Request {
         Dragons: Dragons
     }
 
+    Roadster() {
+        const RequestToEndpoint = Request.list.Roadster;
+        const request = new RequestToEndpoint();
+
+        request.sendDefaultUrl = function () {
+            return new Promise(resolve => {
+                r.requestMain(this.url)
+                    .then(response => resolve(response))
+            })
+        }
+
+        return request
+    }
+
+    CompanyInfo() {
+        const RequestToEndpoint = Request.list.CompanyInfo;
+        const request = new RequestToEndpoint();
+
+        request.sendDefaultUrl = function () {
+            return new Promise(resolve => {
+                r.requestMain(this.url)
+                    .then(response => resolve(response))
+            })
+        }
+
+        return request
+    }
+
     infoAPI() {
         const RequestToEndpoint = Request.list.InfoAPI;
         const request = new RequestToEndpoint();
