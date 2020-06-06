@@ -36,41 +36,74 @@ class Request {
         Dragons: Dragons
     }
 
-    createMethod(name = 'InfoAPI') {
-        const RequestToEndpoint = Request.list[name] || Request.list.InfoAPI;
+    infoAPI() {
+        const RequestToEndpoint = Request.list.InfoAPI;
         const request = new RequestToEndpoint();
 
-        if (name === 'Dragons') {
+        request.sendDefaultUrl = function () {
+            return new Promise(resolve => {
+                r.requestMain(this.url)
+                    .then(response => resolve(response))
+            })
+        }
 
-            request.sendUrlWithQueryId = function (boolean) {
+        return request
+    }
 
-                switch (boolean) {
+    Dragons() {
+        const RequestToEndpoint = Request.list.Dragons;
+        const request = new RequestToEndpoint();
 
-                    case true:
-                        return new Promise(resolve => {
-                            r.requestMain(this.url + `?id=${boolean}`)
-                                .then(response => resolve(response))
-                        })
+        request.sendUrlWithQueryId = function (boolean) {
 
-                    case false:
-                        return new Promise(resolve => {
-                            r.requestMain(this.url + `?id=${boolean}`)
-                                .then(response => resolve(response))
-                        })
-                    default:
-                        throw new Error('You can specify parameters only true or false')
-                }
-            }
+            switch (boolean) {
 
-            request.sendUrlWithQueryLimit = function (integer) {
-                if (typeof integer === 'number') {
+                case true:
                     return new Promise(resolve => {
-                        r.requestMain(this.url + `?limit=${integer}`)
+                        r.requestMain(this.url + `?id=${boolean}`)
                             .then(response => resolve(response))
                     })
-                } else {
-                    throw new Error('You can specify parameter integer')
-                }
+
+                case false:
+                    return new Promise(resolve => {
+                        r.requestMain(this.url + `?id=${boolean}`)
+                            .then(response => resolve(response))
+                    })
+                default:
+                    throw new Error('You can specify parameters only true or false')
+            }
+        }
+
+        request.sendUrlWithQueryLimit = function (integer) {
+            if (typeof integer === 'number') {
+                return new Promise(resolve => {
+                    r.requestMain(this.url + `?limit=${integer}`)
+                        .then(response => resolve(response))
+                })
+            } else {
+                throw new Error('You can specify parameter integer')
+            }
+        }
+
+        request.sendUrlWithQueryOffset = function (integer) {
+            if (typeof integer === 'number') {
+                return new Promise(resolve => {
+                    r.requestMain(this.url + `?offset=${integer}`)
+                        .then(response => resolve(response))
+                })
+            } else {
+                throw new Error('You can specify parameter integer')
+            }
+        }
+
+        request.sendUrlWithQueryIdOffsetLimit = function (booleanId, offsetInt, limitInt) {
+            if (typeof offsetInt && limitInt === 'number' || typeof booleanId === 'boolean') {
+                return new Promise(resolve => {
+                    r.requestMain(this.url + `?offset=${offsetInt}&limit=${limitInt}&id=${booleanId}`)
+                        .then(response => resolve(response))
+                })
+            } else {
+                throw new Error('You can specify parameter integer and boolean')
             }
         }
 
