@@ -16,6 +16,10 @@ module.exports = {
 
         const response = await fetch(url, {method, headers, body});
 
+        for (let [key, value] of response.headers) {
+            console.log(`Header: ${key} = ${value}`)
+        }
+
         return await response.json()
 
     }
