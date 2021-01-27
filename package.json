@@ -4,10 +4,10 @@
   "description": "Wrapper SpaceX API",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node ./test/index.js"
   },
   "keywords": [],
-  "author": "Alexander Shulga (Alex/Sasha JSON)",
+  "author": "Alexander Shulga (sashamiller666@gmail.com)",
   "license": "ISC",
   "repository": {
     "type": "git",
