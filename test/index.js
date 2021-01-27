@@ -4,8 +4,8 @@ const Request = require('../src/request/mainClassFactory');
 
 const APISpaceX = new Request();
 
-// const info = APISpaceX.infoAPI();
-// info.sendDefaultUrl().then(res => console.log(res));
+const info = APISpaceX.infoAPI();
+info.sendDefaultUrl().then(res => console.log(res));
 
 //const dra = APISpaceX.Dragons();
 //dra.sendDefaultUrl().then(res => console.log(res));
